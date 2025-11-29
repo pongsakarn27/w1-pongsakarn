@@ -78,6 +78,7 @@ class MyHomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("ข้อมูลส่วนตัว"),
+                  SizedBox(height: 30),
 
                   Container(
                     padding: EdgeInsets.only(left: 20),
@@ -204,6 +205,109 @@ class SecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Second Page")));
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Container(
+                  padding: EdgeInsets.only(top: 30, left: 10),
+                  child: ClipOval(
+                    child: Image.network(
+                      "https://preview.redd.it/bombardiro-crocodilo-is-watching-you-v0-zz7m4erg081f1.jpeg?auto=webp&s=3ec40520b53a7488e4cec8f1e3457db6490b58ef",
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+
+                Container(
+                  padding: EdgeInsets.only(left: 10),
+                  child: Column(children: [Text("5"), Text("กำลังติดตาม")]),
+                ),
+                SizedBox(width: 10),
+                Container(width: 2, height: 50, color: Colors.grey[400]),
+                SizedBox(width: 10),
+                Container(
+                  child: Column(children: [Text("828.1 K"), Text("ผู้ติดตาม")]),
+                ),
+                SizedBox(width: 10),
+                Container(width: 2, height: 50, color: Colors.grey[400]),
+                SizedBox(width: 10),
+                Container(
+                  child: Column(children: [Text("5"), Text("ถูกใจและบันทึก")]),
+                ),
+              ],
+            ),
+
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.only(left: 20),
+              child: Row(
+                children: [
+                  Text(
+                    "Pongsakarn_Rasameejaem",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Icon(Icons.verified, color: Colors.blue),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 5),
+            Container(
+              padding: EdgeInsets.only(left: 15),
+              child: Row(
+                children: [
+                  Icon(Icons.tiktok),
+                  Text("Pongsakarn16"),
+                  Icon(Icons.arrow_drop_down),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 40),
+            Row(
+              children: [
+                SizedBox(width: 40),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.yellow,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  width: 250,
+                  height: 50,
+                  child: Center(child: Text("ติดตาม")),
+                ),
+                SizedBox(width: 10),
+                Container(child: Icon(Icons.share)),
+              ],
+            ),
+
+            SizedBox(height: 40),
+
+            Row(
+              children: [
+                SizedBox(
+                  width: 190,
+                  child: Image.network(
+                    "https://i.pinimg.com/474x/b3/02/03/b30203cc1a19fa3921b8dcb0b4c62db0.jpg",
+                  ),
+                ),
+                SizedBox(width: 20),
+                SizedBox(
+                  width: 165,
+                  child: Image.network(
+                    "https://cdn.vectorstock.com/i/1000v/07/29/happy-crocodile-for-kids-design-vector-11500729.jpg",
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
