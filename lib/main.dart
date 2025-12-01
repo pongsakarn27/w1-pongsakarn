@@ -179,15 +179,15 @@ class MyHomePage extends StatelessWidget {
                   ),
 
                   SizedBox(height: 20),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () => Navigator.pushNamed(context, '/Second'),
-                      child: Text("Go To Second"),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.orange,
                         foregroundColor: Colors.white,
                       ),
+                      child: Text("Go To Second"),
                     ),
                   ),
                 ],
@@ -272,16 +272,18 @@ class SecondPage extends StatelessWidget {
             Row(
               children: [
                 SizedBox(width: 40),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.yellow,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+                SizedBox(
                   width: 250,
-                  height: 50,
-                  child: Center(child: Text("ติดตาม")),
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.pushNamed(context, '/Second'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.yellow,
+                      foregroundColor: Colors.white,
+                    ),
+                    child: Text("ติดตาม",style: TextStyle(color: Colors.black),) ,
+                  ),
                 ),
-                SizedBox(width: 10),
+                SizedBox(width: 15),
                 Container(child: Icon(Icons.share)),
               ],
             ),
@@ -290,6 +292,7 @@ class SecondPage extends StatelessWidget {
 
             Row(
               children: [
+                SizedBox(width: 17,),
                 SizedBox(
                   width: 190,
                   child: Image.network(
